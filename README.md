@@ -10,8 +10,9 @@ We go through some of the best-known computer vision techniques in this essay. I
 * Coinciding feature
 * RANSAC homography estimate
 * Outlook Warping
-(https://github.com/DheerajReddy2002/Image-Stitching-with-OpenCV/im1.png)
- 
+
+
+![im1](https://user-images.githubusercontent.com/59975618/126669177-f709b578-b3b0-49e1-b083-d0a3e1f3ea88.png)
 
 Detect and remove features
 We want to stitch them together to create a panoramic scene, given the photos like the ones above. It is crucial to note that both pictures have a common region to share.
@@ -39,13 +40,16 @@ We must start by loading 2 pictures, a query picture, and a training picture. In
 On both the query and the train picture we execute detect and compute(). We have a number of important points and descriptions for the pictures at this stage. When SIFT is the extractor of the feature, it will return for each key point a 128-dimensional feature vector. When you choose SURF, we obtain a Vector of 64 dimensions. Some features retrieved using SIFT, SURF, BRISK, and ORB are shown in the following photos.
 
 
- 
+![im2](https://user-images.githubusercontent.com/59975618/126669424-05659f75-6ebe-421a-8e67-1408641f00cd.png)
 
- 
 
- 
+![im3](https://user-images.githubusercontent.com/59975618/126669557-8cd40143-6004-4fbf-8cb8-98748cc5f6d7.png)
 
- 
+
+![im4](https://user-images.githubusercontent.com/59975618/126669621-e6c64ebe-d430-4a11-975a-e8dce8123e10.png)
+
+
+![im5](https://user-images.githubusercontent.com/59975618/126669702-c8502c7e-4ec5-4dbf-8df5-f629c633d70d.png)
 
 ## Matching feature
 
@@ -64,10 +68,10 @@ The authors of the SIFT article offer a technique called a ratio test to ensure 
 Essentially, proportion testing is the same as the BruteForce Matcher cross-checking option. Both ensure that a few of identified traits are in fact as near as comparable as possible.
 
 
+![im6](https://user-images.githubusercontent.com/59975618/126669867-d517533b-9d4c-4d63-9391-d7a4dacbb579.png)
 
- 
- 
 
+![im7](https://user-images.githubusercontent.com/59975618/126669970-6720d43f-f7b4-421d-827e-9ed78f987cbd.png)
 
 The Matcher algorithm, however, will provide both pictures with the best (similar) collection of characteristics. Now we must take these points and create the transformations matrix, based on their matching points, that can sew the 2 pictures together.
 

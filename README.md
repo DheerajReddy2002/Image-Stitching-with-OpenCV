@@ -10,7 +10,7 @@ We go through some of the best-known computer vision techniques in this essay. I
 * Coinciding feature
 * RANSAC homography estimate
 * Outlook Warping
-![Image of Yaktocat] (https://github.com/DheerajReddy2002/Image-Stitching-with-OpenCV/im1.png)
+(https://github.com/DheerajReddy2002/Image-Stitching-with-OpenCV/im1.png)
  
 
 Detect and remove features
